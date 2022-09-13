@@ -2,13 +2,12 @@ import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyApidR5S1gwZ0YHif8xuLqeNGdAQw22N_U",
-  authDomain: "shopwebsite-react.firebaseapp.com",
-  projectId: "shopwebsite-react",
-  storageBucket: "shopwebsite-react.appspot.com",
-  messagingSenderId: "1094005799418",
-  appId: "1:1094005799418:web:13bd6fe20b33bcb6a20c43",
-  measurementId: "G-P5P4Y0JBVB",
+  apiKey: "AIzaSyC3PngwSqNoGPyOxZKIMDcbscp_M64MmJ0",
+  authDomain: "shopwebsite-auth.firebaseapp.com",
+  projectId: "shopwebsite-auth",
+  storageBucket: "shopwebsite-auth.appspot.com",
+  messagingSenderId: "723838566712",
+  appId: "1:723838566712:web:9d6eff951f7f05485b01cd",
 };
 
 // Initialize Firebase
