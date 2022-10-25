@@ -15,6 +15,8 @@ export default function Navbar() {
     button = <LoginButton onClick={this.handleLoginClick} />;
   }*/
 
+  console.log("Hoi Juan")
+
   return (
     <nav className="nav">
       <Link to="/" className="site-title">
