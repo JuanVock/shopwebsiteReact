@@ -4,28 +4,50 @@ import imgLogo from "../image/giphy.gif";
 
 import { useAuth } from "../context/AuthContext";
 
-//const { user, googleLogin, logOut } = useAuth();
-//console.log(user);
+export default function Navbar() {
+  const { user, googleLogin, logOut } = useAuth();
+  //console.log(user);
+  //const isLoggedIn = this.state.isLoggedIn;
 
-class Navbar extends Component {
-  render() {
-    return (
-      <nav className="nav">
-        <Link to="/" className="site-title">
-          <img src={imgLogo} width={50} height={50}></img>
-        </Link>
-        <ul>
-          <li className="active">
-            <Link to="/pricing">Clothing</Link>
-          </li>
+  /*if (isLoggedIn) {
+    button = <LogoutButton onClick={this.handleLogoutClick} />;
+  } else {
+    button = <LoginButton onClick={this.handleLoginClick} />;
+  }*/
+
+  return (
+    <nav className="nav">
+      <Link to="/" className="site-title">
+        <img src={imgLogo} width={50} height={50}></img>
+      </Link>
+      <ul>
+        <li className="active">
+          <Link to="/pricing">Clothing</Link>
+        </li>
+        <li>
+          <Link to="/about">About</Link>
+        </li>
+
+        {/*isLoggedIn ? (
           <li>
-            <Link to="/about">About</Link>
+            <button onClick={() => logOut()}>logou</button>
           </li>
-        </ul>
-      </nav>
-    );
-  }
+        ) : (
+          <li>
+            <button onClick={() => googleLogin()}>login</button>
+          </li>
+        )*/}
+
+        {/*<li>
+          <button onClick={() => googleLogin()}>login</button>
+        </li>
+        <li>{user?.email}</li>
+        <li>{user?.img}</li>*/}
+      </ul>
+    </nav>
+  );
 }
+
 document.addEventListener("DOMContentLoaded", function () {
   const el_autohide = document.querySelector(".autohide");
 
@@ -50,4 +72,3 @@ document.addEventListener("DOMContentLoaded", function () {
   }
   // if
 });
-export default Navbar;
