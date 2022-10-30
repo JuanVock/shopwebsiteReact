@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, useState } from "react";
 import { Link } from "react-router-dom";
 import imgLogo from "../image/giphy.gif";
 
@@ -6,16 +6,11 @@ import { useAuth } from "../context/AuthContext";
 
 export default function Navbar() {
   const { user, googleLogin, logOut } = useAuth();
-  //console.log(user);
-  //const isLoggedIn = this.state.isLoggedIn;
 
-  /*if (isLoggedIn) {
-    button = <LogoutButton onClick={this.handleLogoutClick} />;
-  } else {
-    button = <LoginButton onClick={this.handleLoginClick} />;
-  }*/
-
-  console.log("Hoi Juan")
+  /*const [state, setState] = useState(false);
+  const toggle = () => {
+    setState(!state);
+  };*/
 
   return (
     <nav className="nav">
@@ -29,22 +24,9 @@ export default function Navbar() {
         <li>
           <Link to="/about">About</Link>
         </li>
-
-        {/*isLoggedIn ? (
-          <li>
-            <button onClick={() => logOut()}>logou</button>
-          </li>
-        ) : (
-          <li>
-            <button onClick={() => googleLogin()}>login</button>
-          </li>
-        )*/}
-
-        {/*<li>
-          <button onClick={() => googleLogin()}>login</button>
-        </li>
-        <li>{user?.email}</li>
-        <li>{user?.img}</li>*/}
+        {/* <li>
+          <button onClick={toggle}>{state ? logOut() : googleLogin()} </button>
+        </li> */}
       </ul>
     </nav>
   );
